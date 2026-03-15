@@ -7,16 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&family=Onest:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f4f7f9;
+    --bg: #f7f8fa;
     --surface: #ffffff;
-    --surface2: #eaf1f5;
-    --border: #ccdde8;
-    --accent: #0a9e8e;
-    --accent2: #1a7fbd;
-    --gold: #a07830;
-    --text: #0e1c26;
-    --muted: #5a7a8e;
-    --danger: #c03030;
+    --surface2: #eef1f5;
+    --border: #d8e0e8;
+    --accent: #0fa897;
+    --accent2: #2a8fc4;
+    --gold: #b08a4e;
+    --text: #1a2530;
+    --muted: #5a6e7d;
+    --danger: #c0392b;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -37,8 +37,8 @@
     position: fixed;
     inset: 0;
     background-image:
-      linear-gradient(rgba(10,158,142,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(10,158,142,0.06) 1px, transparent 1px);
+      linear-gradient(rgba(15,168,151,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15,168,151,0.04) 1px, transparent 1px);
     background-size: 48px 48px;
     pointer-events: none;
     z-index: 0;
@@ -53,9 +53,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 48px;
-    border-bottom: 1px solid rgba(30,45,56,0.6);
+    border-bottom: 1px solid rgba(216,224,232,0.8);
     backdrop-filter: blur(16px);
-    background: rgba(244,247,249,0.85);
+    background: rgba(247,248,250,0.85);
   }
 
   .nav-logo {
@@ -102,7 +102,7 @@
 
   .nav-cta:hover {
     background: var(--accent);
-    color: var(--bg);
+    color: #ffffff;
   }
 
   /* ── HERO ── */
@@ -167,7 +167,7 @@
 
   .btn-primary {
     background: var(--accent);
-    color: var(--bg);
+    color: #ffffff;
     font-family: 'DM Mono', monospace;
     font-size: 0.75rem;
     letter-spacing: 0.12em;
@@ -416,7 +416,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.2em;
-    color: #b0ccd8;
+    color: #c5d2db;
     margin-bottom: 24px;
     transition: color 0.2s;
   }
@@ -449,7 +449,7 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--accent);
-    border: 1px solid rgba(45,212,192,0.25);
+    border: 1px solid rgba(15,168,151,0.3);
     padding: 4px 10px;
   }
 
@@ -489,7 +489,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 3rem;
     font-weight: 300;
-    color: #b0ccd8;
+    color: #c5d2db;
     line-height: 1;
   }
 
@@ -623,7 +623,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.6rem;
     letter-spacing: 0.08em;
-    color: var(--border);
+    color: var(--muted);
     text-transform: uppercase;
     max-width: 360px;
     text-align: right;
@@ -913,7 +913,7 @@
     <div class="cta-divider"></div>
     <h2>Ready to read your biology?</h2>
     <p>Book an initial consultation to discuss your goals and what data you already have. Sessions are available remotely — no referral required.</p>
-    <a href="/cdn-cgi/l/email-protection#dcbfb3b2a8bdbfa89cbeb5b3b1bdaebfb3f2bfbd" class="btn-primary">Book a Consultation</a>
+    <a href="/cdn-cgi/l/email-protection#4d2e2223392c2e390d2f2422202c3f2e22632e2c" class="btn-primary">Book a Consultation</a>
   </div>
 </section>
 
@@ -929,4 +929,12 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
